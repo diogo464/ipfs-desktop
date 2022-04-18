@@ -9,7 +9,8 @@ const { IS_MAC, IS_WIN, IS_APPIMAGE } = require('../common/consts')
 function isAutoUpdateSupported () {
   // atm only macOS, windows and AppImage builds support autoupdate mechanism,
   // everything else needs to be updated manually or via a third-party package manager
-  return IS_MAC || IS_WIN || IS_APPIMAGE
+  // return IS_MAC || IS_WIN || IS_APPIMAGE
+  return false
 }
 
 let updateNotification = null // must be a global to avoid gc
