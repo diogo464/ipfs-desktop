@@ -63,15 +63,19 @@ linux:
     - snap
     - freebsd
 
-snap:
-  confinement: strict
-  plugs:
-    - default
-    - network
-    - network-bind
-    - removable-media
-  publish:
-    - github
+deb:
+  depends:
+    - gconf2
+    - gconf-service
+    - libnotify4
+    - libappindicator1
+    - libxtst6
+    - libnss3
+    - traceroute
+
+rpm:
+  depends:
+    - traceroute
 
 publish:
   - github
