@@ -39,6 +39,7 @@ dmg:
       path: /Applications
 
 nsis:
+  artifactName: ${name}_${os}-${arch}.${ext}
   include: assets/build/nsis.nsh
   oneClick: false
   warningsAsErrors: false
@@ -47,7 +48,7 @@ nsis:
   allowToChangeInstallationDirectory: true
 
 linux:
-  artifactName: ${name}-${version}-${os}-${arch}.${ext}
+  artifactName: ${name}_${os}-${arch}.${ext}
   executableName: ipfs-desktop
   executableArgs:
     - --no-sandbox
@@ -60,7 +61,6 @@ linux:
     - AppImage
     - deb
     - rpm
-    - snap
     - freebsd
 
 deb:
