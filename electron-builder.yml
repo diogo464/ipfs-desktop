@@ -1,5 +1,6 @@
 appId: io.ipfs.desktop
 generateUpdatesFilesForAllChannels: true
+electronVersion: 18.2.3
 
 files:
   - filter:
