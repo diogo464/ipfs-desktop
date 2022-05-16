@@ -9,7 +9,7 @@ const defaults = {
       '--agent-version-suffix=desktop',
       '--migrate',
       '--enable-gc',
-      '--routing=dhtclient'
+      '--routing=dht'
     ]
   },
   language: (electron.app || electron.remote.app).getLocale(),
