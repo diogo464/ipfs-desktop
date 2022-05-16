@@ -5,9 +5,9 @@ const path = require('path')
 
 module.exports.path = function () {
   const paths = [
-    path.resolve(path.join(__dirname, '..', 'go-ipfs', 'ipfs')),
-    path.resolve(path.join(__dirname, '..', 'go-ipfs', 'ipfs.exe'))
-  ]
+    path.resolve(path.join(__dirname, '..', 'bin', 'ipfs')),
+    path.resolve(path.join(__dirname, '..', 'bin', 'ipfs.exe'))
+  ].map(p => p.replace('app.asar', 'app.asar.unpacked'))
 
   for (const bin of paths) {
     if (fs.existsSync(bin)) {

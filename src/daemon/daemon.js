@@ -22,7 +22,6 @@ function getIpfsBinPath () {
     getCustomBinary() ||
     require('go-ipfs')
       .path()
-      .replace('app.asar', 'app.asar.unpacked')
 }
 
 async function spawn ({ flags, path }) {
